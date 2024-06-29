@@ -44,7 +44,7 @@ export default function App() {
       {isLoading ? (
         <Text>Fetching the weather...</Text>
       ) : (
-        <Weather weather={weatherCondition} temperature={temperature} />
+        <Weather weather={weatherCondition} temperature={temperature} windSpeed={windSpeed} />
       )}
       {error ? <Text>{error}</Text> : null}
     </View>
