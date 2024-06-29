@@ -9,6 +9,7 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [temperature, setTemperature] = useState(0);
   const [weatherCondition, setWeatherCondition] = useState(null);
+  const [windSpeed, setWindSpeed] = useState(0);
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -33,6 +34,7 @@ export default function App() {
 
       setTemperature(result.main.temp);
       setWeatherCondition(result.weather[0].main);
+      setWindSpeed(result.wind.speed);
       setIsLoading(false);
     } catch (error) {
       setError(error.message);
